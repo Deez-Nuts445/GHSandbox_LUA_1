@@ -1,3 +1,0 @@
-for i,v in pairs(game.Players:GetChildren()) do
-    v:Kick('Server shutdown')
-end
