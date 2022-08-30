@@ -24,6 +24,7 @@ local Value2 = Instance.new("NumberValue")
 Speedcheats.Name = "Speed cheats"
 Speedcheats.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 Speedcheats.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Speedcheats.ResetOnSpawn = false
 
 Frame.Parent = Speedcheats
 Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
