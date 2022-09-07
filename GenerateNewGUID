@@ -1,0 +1,18 @@
+function log(l1,l2)
+	local t = {l1,l2}
+	-- "If you cannot see the table contents, turn off log mode in the 3 dots in output!"
+	print(t)
+end
+function toClipboard(String)
+	local clipBoard = setclipboard or toclipboard or set_clipboard or (Clipboard and Clipboard.set)
+	if clipBoard then
+		clipBoard(String)
+		print("Ok")
+	else
+		warn("No")
+	end
+end
+
+local HttpService = game:GetService("HttpService")
+local result = HttpService:GenerateGUID(false)
+toClipboard(result) 
