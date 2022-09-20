@@ -1,4 +1,4 @@
-local ft = _G.XFTGK_FUNCTION
+local ft = _G.FUNCTION
 
 if ft == "GetJobId" then
 function log(l1,l2)
