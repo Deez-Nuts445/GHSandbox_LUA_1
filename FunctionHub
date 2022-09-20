@@ -1,30 +1,30 @@
-if _G.function == "GetJobId" then
-function log(l1,l2)
-	local t = {l1,l2}
-	-- "If you cannot see the table contents, turn off log mode in the 3 dots in output!"
-	print(t)
-end
-function toClipboard(String)
-	local clipBoard = setclipboard or toclipboard or set_clipboard or (Clipboard and Clipboard.set)
-	if clipBoard then
-		clipBoard(String)
-		print("Ok")
-	else
-		warn("No")
+if _G.f == "GetJobId" then
+	function log(l1,l2)
+		local t = {l1,l2}
+		-- "If you cannot see the table contents, turn off log mode in the 3 dots in output!"
+		print(t)
 	end
-end
+	function toClipboard(String)
+		local clipBoard = setclipboard or toclipboard or set_clipboard or (Clipboard and Clipboard.set)
+		if clipBoard then
+			clipBoard(String)
+			print("Ok")
+		else
+			warn("No")
+		end
+	end
 
-toClipboard(game.JobId)
+	toClipboard(game.JobId)
 end
-if _G.function = "exit" then
-    game:shutdown()
+if _G.f == "exit" then
+	game:shutdown()
 end
-if _G.function == "utg" then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Blukez/Scripts/main/UTG%20V3%20RAW"))()
+if _G.f == "utg" then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Blukez/Scripts/main/UTG%20V3%20RAW"))()
 end
-if _G.function == "wallwalk" then
-    loadstring(game:HttpGetAsync("https://pastebin.com/raw/RY9cBbdG"))()
+if _G.f == "wallwalk" then
+	loadstring(game:HttpGetAsync("https://pastebin.com/raw/RY9cBbdG"))()
 end
-if _G.function == "controlplr" then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/ControlPlrGui", true))()
+if _G.f == "controlplr" then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/ControlPlrGui", true))()
 end
