@@ -16,7 +16,7 @@ end
 
 toClipboard(game.JobId)
 end
-if ft = "exit" then
+if _G.function = "exit" then
     game:shutdown()
 end
 if _G.function == "utg" then
