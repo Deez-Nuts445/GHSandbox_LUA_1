@@ -155,7 +155,6 @@ local args = {
 game:GetService("ReplicatedStorage").ShopEvent:FireServer(unpack(args))
 end
 if getgenv().f == "ShowGlass" then
-	if game.GameId == 3073934761 then
 		local c = workspace['Glass Bridge'].GlassPane:GetChildren()
 
 for i=1,#c do
@@ -168,7 +167,6 @@ elseif c[i]['2'].CanCollide == true then
 
 c[i]['2'].Transparency = 0
 
-end
 
 end
 	end
