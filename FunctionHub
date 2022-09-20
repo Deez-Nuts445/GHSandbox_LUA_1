@@ -171,6 +171,6 @@ c[i]['2'].Transparency = 0
 end
 	end
 end
-if getgenv().f == "Admin" then
+if getgenv().f == "admin" then
 	loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/PrisonLife'),true))()
 end
