@@ -93,7 +93,7 @@ end)
 Camera.CameraSubject = ball
 humanoid.Died:Connect(function() tc:Disconnect() end)
 end
-if getgenv.f == "CartBooster" then
+if getgenv().f == "CartBooster" then
 for i, v in pairs(workspace:GetDescendants()) do
    if v.Parent.Name == "Up" and v.ClassName == "ClickDetector" then
        spawn(function()
