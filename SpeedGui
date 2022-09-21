@@ -2,7 +2,11 @@
 -- Version: 3.2
 -- By Farrel#2469
 
--- Instances:
+if Loaded == true then
+   print("script loaded already!")
+end
+
+getgenv().Loaded = true
 
 local Speedcheats = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
