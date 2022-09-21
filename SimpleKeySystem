@@ -1,6 +1,10 @@
 -- Gui to Lua
 -- Version: 3.2
 local key = "suX5R6du-(TgiVp&9YsShp4%E2!7?wKQatBeu$HK#*#OMPmoPhgAcUGFZ1Ez$(Vy7zSb$"
+if getgenv().Loaded then
+    error("Script already loaded!")
+end
+getgenv().Loaded = false
 -- Instances:
 
 local ScreenGui = Instance.new("ScreenGui")
