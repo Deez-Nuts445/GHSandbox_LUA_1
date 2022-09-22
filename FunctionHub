@@ -1,8 +1,7 @@
 -- getgenv() is only avabiale for exploits like krnl,scriptware,synapxe etc.
 -- if you cant access getgenv then wait for the _G version(more dangerous as smart devs can use a for if statement to see what table name they didnt add and kick you(basicily and _G or anti exploit with _G thing))
--- _G and getgenv() is built in for in-game execution
 
-if getgenv().f or _G.f == "GetJobId" then
+if getgenv().f == "GetJobId" then
 	function log(l1,l2)
 		local t = {l1,l2}
 		-- "If you cannot see the table contents, turn off log mode in the 3 dots in output!"
@@ -20,19 +19,19 @@ if getgenv().f or _G.f == "GetJobId" then
 
 	toClipboard(game.JobId)
 end
-if getgenv().f or _G.f == "exit" then
+if getgenv().f == "exit" then
 	game:shutdown()
 end
-if getgenv().f or _G.f == "utg" then
+if getgenv().f == "utg" then
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Blukez/Scripts/main/UTG%20V3%20RAW"))()
 end
-if getgenv().f or _G.f == "wallwalk" then
+if getgenv().f == "wallwalk" then
 	loadstring(game:HttpGetAsync("https://pastebin.com/raw/RY9cBbdG"))()
 end
-if getgenv().f or _G.f == "gamegui" then
+if getgenv().f == "gamegui" then
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/InfectiousSmile.lua"))()
 end
-if getgenv().f or _G.f == "ball" then
+if getgenv().f == "ball" then
 local UserInputService = game:GetService("UserInputService")
 local RunService = game:GetService("RunService")
 local Camera = workspace.CurrentCamera
@@ -94,10 +93,10 @@ end)
 Camera.CameraSubject = ball
 humanoid.Died:Connect(function() tc:Disconnect() end)
 end
-if getgenv().f or _G.f == "choosemap" then
+if getgenv().f == "choosemap" then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/hellamane/epixcryan/main/source.lua"))()
 end
-if getgenv().f or _G.f == "alltools" then
+if getgenv().f == "alltools" then
 local args = {
     [1] = "SuperLauncher",
     [2] = 0
@@ -155,7 +154,7 @@ local args = {
 
 game:GetService("ReplicatedStorage").ShopEvent:FireServer(unpack(args))
 end
-if getgenv().f or _G.f == "ShowGlass" then
+if getgenv().f == "ShowGlass" then
 		local c = workspace['Glass Bridge'].GlassPane:GetChildren()
 
 for i=1,#c do
@@ -172,10 +171,10 @@ c[i]['2'].Transparency = 0
 end
 	end
 end
-if getgenv().f or _G.f == "pladmin" then
+if getgenv().f == "pladmin" then
 	loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/PrisonLife'),true))()
 end
 
-if getgenv().f or _G.f == "admin" then
+if getgenv().f == "admin" then
 	loadstring(game:HttpGet(('https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/Admin'),true))()
 end
