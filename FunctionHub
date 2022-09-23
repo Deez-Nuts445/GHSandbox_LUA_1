@@ -1,12 +1,12 @@
 -- getgenv() is only avabiale for exploits like krnl,scriptware,synapxe etc.
 -- if you cant access getgenv then wait for the _G version(more dangerous as smart devs can use a for if statement to see what table name they didnt add and kick you(basicily and _G or anti exploit with _G thing))
-if getgenv().f == "GetJobId" then
 
+if getgenv().f == "GetJobId" then
 	function log(l1,l2)
 		local t = {l1,l2}
 		-- "If you cannot see the table contents, turn off log mode in the 3 dots in output!"
 		print(t)
-	
+	end
 	function toClipboard(String)
 		local clipBoard = setclipboard or toclipboard or set_clipboard or (Clipboard and Clipboard.set)
 		if clipBoard then
@@ -14,34 +14,24 @@ if getgenv().f == "GetJobId" then
 			print("Ok")
 		else
 			warn("No")
-		
-	
+		end
+	end
 
 	toClipboard(game.JobId)
-	This Sentence is a tag so that a text replacer can reconise it2
-
+end
 if getgenv().f == "exit" then
-
 	game:shutdown()
-	This Sentence is a tag so that a text replacer can reconise it2
-
+end
 if getgenv().f == "utg" then
-
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Blukez/Scripts/main/UTG%20V3%20RAW"))()
-	This Sentence is a tag so that a text replacer can reconise it2
-
+end
 if getgenv().f == "wallwalk" then
-
 	loadstring(game:HttpGetAsync("https://pastebin.com/raw/RY9cBbdG"))()
-	This Sentence is a tag so that a text replacer can reconise it2
-
+end
 if getgenv().f == "gamegui" then
-
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/InfectiousSmile.lua"))()
-	This Sentence is a tag so that a text replacer can reconise it2
-
+end
 if getgenv().f == "ball" then
-
 local UserInputService = game:GetService("UserInputService")
 local RunService = game:GetService("RunService")
 local Camera = workspace.CurrentCamera
@@ -52,11 +42,11 @@ local JUMP_GAP = 0.3
 
 local character = game.Players.LocalPlayer.Character
 
-for i,v in ipairs(character:GetDescants()) do
+for i,v in ipairs(character:GetDescendants()) do
    if v:IsA("BasePart") then
        v.CanCollide = false
-   
-
+   end
+end
 
 local ball = character.HumanoidRootPart
 ball.Shape = Enum.PartType.Ball
@@ -64,26 +54,26 @@ ball.Size = Vector3.new(5,5,5)
 local humanoid = character:WaitForChild("Humanoid")
 local params = RaycastParams.new()
 params.FilterType = Enum.RaycastFilterType.Blacklist
-params.FilterDescantsInstances = {character}
+params.FilterDescendantsInstances = {character}
 
-local tc = RunService.RerStepped:Connect(function(delta)
+local tc = RunService.RenderStepped:Connect(function(delta)
    ball.CanCollide = true
    humanoid.PlatformStand = true
-if UserInputService:GetFocusedTextBox() then return 
+if UserInputService:GetFocusedTextBox() then return end
 if UserInputService:IsKeyDown("W") then
 ball.RotVelocity -= Camera.CFrame.RightVector * delta * SPEED_MULTIPLIER
-
+end
 if UserInputService:IsKeyDown("A") then
 ball.RotVelocity -= Camera.CFrame.LookVector * delta * SPEED_MULTIPLIER
-
+end
 if UserInputService:IsKeyDown("S") then
 ball.RotVelocity += Camera.CFrame.RightVector * delta * SPEED_MULTIPLIER
-
+end
 if UserInputService:IsKeyDown("D") then
 ball.RotVelocity += Camera.CFrame.LookVector * delta * SPEED_MULTIPLIER
-
+end
 --ball.RotVelocity = ball.RotVelocity - Vector3.new(0,ball.RotVelocity.Y/50,0)
-)
+end)
 
 UserInputService.JumpRequest:Connect(function()
 local result = workspace:Raycast(
@@ -97,19 +87,16 @@ params
 )
 if result then
 ball.Velocity = ball.Velocity + Vector3.new(0,JUMP_POWER,0)
-
-)
+end
+end)
 
 Camera.CameraSubject = ball
-humanoid.Died:Connect(function() tc:Disconnect() )
-
+humanoid.Died:Connect(function() tc:Disconnect() end)
+end
 if getgenv().f == "choosemap" then
-
 loadstring(game:HttpGet("https://raw.githubusercontent.com/hellamane/epixcryan/main/source.lua"))()
-This Sentence is a tag so that a text replacer can reconise it2
-
+end
 if getgenv().f == "alltools" then
-
 local args = {
     [1] = "SuperLauncher",
     [2] = 0
@@ -166,10 +153,8 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").ShopEvent:FireServer(unpack(args))
-This Sentence is a tag so that a text replacer can reconise it2
-
+end
 if getgenv().f == "ShowGlass" then
-
 		local c = workspace['Glass Bridge'].GlassPane:GetChildren()
 
 for i=1,#c do
@@ -182,17 +167,14 @@ elseif c[i]['2'].CanCollide == true then
 
 c[i]['2'].Transparency = 0
 
-This Sentence is a tag so that a text replacer can reconise it2
 
-	
-
+end
+	end
+end
 if getgenv().f == "pladmin" then
-
 	loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/PrisonLife'),true))()
-	This Sentence is a tag so that a text replacer can reconise it2
-
+end
 
 if getgenv().f == "admin" then
-
 	loadstring(game:HttpGet(('https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/Admin'),true))()
-	This Sentence is a tag so that a text replacer can reconise it2
+end
