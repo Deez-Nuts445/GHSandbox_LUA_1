@@ -122,5 +122,5 @@ if getgenv().f == "admin" then
 end
 
 if getgenv().f == "CartBooster" then
-	loadGithubCode("Deez-Nuts445","GHSandbox_LUA_1","CartBooster")
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez_Nuts445/GHSandbox_LUA_1/main/CartBooster,true))()
 end
