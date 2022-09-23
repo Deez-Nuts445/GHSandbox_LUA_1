@@ -1,6 +1,6 @@
 -- getgenv() is only avabiale for exploits like krnl,scriptware,synapxe etc.
 -- if you cant access getgenv then wait for the _G version(more dangerous as smart devs can use a for if statement to see what table name they didnt add and kick you(basicily and _G or anti exploit with _G thing))
-function loadGithubCode(owner,projname,filename)
+function GithubCode(owner,projname,filename)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/"..owner.."/"..projname.."/main/"..filename,true))() -- No Folder Support
 end
 
@@ -43,7 +43,7 @@ end
 
 
 function _ball()
-	loadGithubCode("Deez-Nuts442","GHSandbox_LUA_1",Ball)
+	GithubCode("Deez-Nuts442","GHSandbox_LUA_1",Ball)
 end
 
 function _GetAllTools()
