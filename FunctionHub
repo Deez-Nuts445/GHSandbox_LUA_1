@@ -1,12 +1,15 @@
 -- getgenv() is only avabiale for exploits like krnl,scriptware,synapxe etc.
 -- if you cant access getgenv then wait for the _G version(more dangerous as smart devs can use a for if statement to see what table name they didnt add and kick you(basicily and _G or anti exploit with _G thing))
+local AutoExecuteAdmin = getgenv().A
+local AutoExecuteGui = getgenv().B
 
-function _getjobid()
+if getgenv().f == "GetJobId" then
+
 	function log(l1,l2)
 		local t = {l1,l2}
 		-- "If you cannot see the table contents, turn off log mode in the 3 dots in output!"
 		print(t)
-	end
+	
 	function toClipboard(String)
 		local clipBoard = setclipboard or toclipboard or set_clipboard or (Clipboard and Clipboard.set)
 		if clipBoard then
@@ -14,37 +17,101 @@ function _getjobid()
 			print("Ok")
 		else
 			warn("No")
-		end
-	end
+		
+	
 
 	toClipboard(game.JobId)
-end
+	This Sentence is a tag so that a text replacer can reconise it2
 
-function _shutdown()
+if getgenv().f == "exit" then
+
 	game:shutdown()
-end
+	This Sentence is a tag so that a text replacer can reconise it2
 
+if getgenv().f == "utg" then
 
-function _utg()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Blukez/Scripts/main/UTG%20V3%20RAW"))()
-end
+	This Sentence is a tag so that a text replacer can reconise it2
 
+if getgenv().f == "wallwalk" then
 
-function _wallwalk()
 	loadstring(game:HttpGetAsync("https://pastebin.com/raw/RY9cBbdG"))()
-end
+	This Sentence is a tag so that a text replacer can reconise it2
 
-function _gamegui()
+if getgenv().f == "gamegui" then
+
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/InfectiousSmile.lua"))()
-end
+	This Sentence is a tag so that a text replacer can reconise it2
+
+if getgenv().f == "ball" then
+
+local UserInputService = game:GetService("UserInputService")
+local RunService = game:GetService("RunService")
+local Camera = workspace.CurrentCamera
+
+local SPEED_MULTIPLIER = 30
+local JUMP_POWER = 60
+local JUMP_GAP = 0.3
+
+local character = game.Players.LocalPlayer.Character
+
+for i,v in ipairs(character:GetDescants()) do
+   if v:IsA("BasePart") then
+       v.CanCollide = false
+   
 
 
-function _ball()
-	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/Ball"))()
-end
+local ball = character.HumanoidRootPart
+ball.Shape = Enum.PartType.Ball
+ball.Size = Vector3.new(5,5,5)
+local humanoid = character:WaitForChild("Humanoid")
+local params = RaycastParams.new()
+params.FilterType = Enum.RaycastFilterType.Blacklist
+params.FilterDescantsInstances = {character}
 
-function _GetAllTools()
+local tc = RunService.RerStepped:Connect(function(delta)
+   ball.CanCollide = true
+   humanoid.PlatformStand = true
+if UserInputService:GetFocusedTextBox() then return 
+if UserInputService:IsKeyDown("W") then
+ball.RotVelocity -= Camera.CFrame.RightVector * delta * SPEED_MULTIPLIER
+
+if UserInputService:IsKeyDown("A") then
+ball.RotVelocity -= Camera.CFrame.LookVector * delta * SPEED_MULTIPLIER
+
+if UserInputService:IsKeyDown("S") then
+ball.RotVelocity += Camera.CFrame.RightVector * delta * SPEED_MULTIPLIER
+
+if UserInputService:IsKeyDown("D") then
+ball.RotVelocity += Camera.CFrame.LookVector * delta * SPEED_MULTIPLIER
+
+--ball.RotVelocity = ball.RotVelocity - Vector3.new(0,ball.RotVelocity.Y/50,0)
+)
+
+UserInputService.JumpRequest:Connect(function()
+local result = workspace:Raycast(
+ball.Position,
+Vector3.new(
+0,
+-((ball.Size.Y/2)+JUMP_GAP),
+0
+),
+params
+)
+if result then
+ball.Velocity = ball.Velocity + Vector3.new(0,JUMP_POWER,0)
+
+)
+
+Camera.CameraSubject = ball
+humanoid.Died:Connect(function() tc:Disconnect() )
+
+if getgenv().f == "choosemap" then
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/hellamane/epixcryan/main/source.lua"))()
+This Sentence is a tag so that a text replacer can reconise it2
+
+if getgenv().f == "alltools" then
 
 local args = {
     [1] = "SuperLauncher",
@@ -102,10 +169,11 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").ShopEvent:FireServer(unpack(args))
-end
+This Sentence is a tag so that a text replacer can reconise it2
 
-function showglass()
-local c = workspace['Glass Bridge'].GlassPane:GetChildren()
+if getgenv().f == "ShowGlass" then
+
+		local c = workspace['Glass Bridge'].GlassPane:GetChildren()
 
 for i=1,#c do
 
@@ -117,54 +185,17 @@ elseif c[i]['2'].CanCollide == true then
 
 c[i]['2'].Transparency = 0
 
-end
-end
-end
+This Sentence is a tag so that a text replacer can reconise it2
 
-function _pladmin()
-	loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/PrisonLife'),true))()
-end
+	
 
-
-function _admin()
-	loadstring(game:HttpGet(('https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/Admin'),true))()
-end
-
-
-
-if getgenv().f == "GetJobId" then
-	_getjobid()
-end
-if getgenv().f == "exit" then
-	_shutdown()
-end
-if getgenv().f == "utg" then
-_utg()
-end
-if getgenv().f == "wallwalk" then
-	_wallwalk()
-end
-if getgenv().f == "gamegui" then
-_gamegui()
-end
-if getgenv().f == "ball" then
-	_ball()
-end
-if getgenv().f == "alltools" then
-_GetAllTools()
-end
-if getgenv().f == "ShowGlass" then
-	showglass()
-end
 if getgenv().f == "pladmin" then
-_pladmin()
-end
+
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/PrisonLife'),true))()
+	This Sentence is a tag so that a text replacer can reconise it2
+
+
 if getgenv().f == "admin" then
-_admin()
-end
 
-
-
-
-
-
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/Admin'),true))()
+	This Sentence is a tag so that a text replacer can reconise it2
