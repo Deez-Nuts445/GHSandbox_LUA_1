@@ -1,9 +1,7 @@
 -- getgenv() is only avabiale for exploits like krnl,scriptware,synapxe etc.
 -- if you cant access getgenv then wait for the _G version(more dangerous as smart devs can use a for if statement to see what table name they didnt add and kick you(basicily and _G or anti exploit with _G thing))
-function loadGithubCode(owner,projname,filename)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/"..owner.."/"..projname.."/main/"..filename,true))()
-end
-if getgenv().f == "GetJobId" then
+
+function _getjobid()
 	function log(l1,l2)
 		local t = {l1,l2}
 		-- "If you cannot see the table contents, turn off log mode in the 3 dots in output!"
@@ -21,24 +19,33 @@ if getgenv().f == "GetJobId" then
 
 	toClipboard(game.JobId)
 end
-if getgenv().f == "exit" then
+
+function _shutdown()
 	game:shutdown()
 end
-if getgenv().f == "utg" then
+
+
+function _utg()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Blukez/Scripts/main/UTG%20V3%20RAW"))()
 end
-if getgenv().f == "wallwalk" then
+
+
+function _wallwalk()
 	loadstring(game:HttpGetAsync("https://pastebin.com/raw/RY9cBbdG"))()
 end
-if getgenv().f == "gamegui" then
+
+function _gamegui()
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/InfectiousSmile.lua"))()
 end
-if getgenv().f == "ball" then
-loadGithubCode("Deez-Nuts455","GHSandbox_LUA_1","ball")
-if getgenv().f == "choosemap" then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/hellamane/epixcryan/main/source.lua"))()
+
+
+function _ball()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/Ball"))()
 end
-if getgenv().f == "alltools" then
+
+function _GetAllTools()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/hellamane/epixcryan/main/source.lua"))()
+
 local args = {
     [1] = "SuperLauncher",
     [2] = 0
@@ -96,8 +103,9 @@ local args = {
 
 game:GetService("ReplicatedStorage").ShopEvent:FireServer(unpack(args))
 end
-if getgenv().f == "ShowGlass" then
-		local c = workspace['Glass Bridge'].GlassPane:GetChildren()
+
+function showglass()
+local c = workspace['Glass Bridge'].GlassPane:GetChildren()
 
 for i=1,#c do
 
@@ -109,18 +117,53 @@ elseif c[i]['2'].CanCollide == true then
 
 c[i]['2'].Transparency = 0
 
+end
+end
+end
 
-end
-	end
-end
-if getgenv().f == "pladmin" then
+function _pladmin()
 	loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/PrisonLife'),true))()
 end
 
-if getgenv().f == "admin" then
+
+function _admin()
 	loadstring(game:HttpGet(('https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/Admin'),true))()
 end
 
-if getgenv().f == "CartBooster" then
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez_Nuts445/GHSandbox_LUA_1/main/CartBooster,true))()
+
+
+if getgenv().f == "GetJobId" then
+	_getjobid()
 end
+if getgenv().f == "exit" then
+	_shutdown()
+end
+if getgenv().f == "utg" then
+_utg()
+end
+if getgenv().f == "wallwalk" then
+	_wallwalk()
+end
+if getgenv().f == "gamegui" then
+_gamegui()
+end
+if getgenv().f == "ball" then
+	_ball()
+end
+if getgenv().f == "alltools" then
+_GetAllTools()
+end
+if getgenv().f == "ShowGlass" then
+	showglass()
+end
+if getgenv().f == "pladmin" then
+_pladmin()
+end
+if getgenv().f == "admin" then
+_admin()
+end
+
+
+
+
+
