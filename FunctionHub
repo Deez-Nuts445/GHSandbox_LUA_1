@@ -1,6 +1,6 @@
 -- getgenv() is only avabiale for exploits like krnl,scriptware,synapxe etc.
 -- if you cant access getgenv then wait for the _G version(more dangerous as smart devs can use a for if statement to see what table name they didnt add and kick you(basicily and _G or anti exploit with _G thing))
-
+local func = string.lower(func)
 function _getjobid()
 	function log(l1,l2)
 		local t = {l1,l2}
@@ -130,40 +130,40 @@ function _admin()
 	loadstring(game:HttpGet(('https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/Admin'),true))()
 end
 
+function _fecheck()
+loadstring(game:HttpGet((https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/FECheck'),true))()
+end
 
-
-if getgenv().f == "GetJobId" then
+if func == "getjobid" then
 	_getjobid()
 end
-if getgenv().f == "exit" then
+if func == "exit" then
 	_shutdown()
 end
-if getgenv().f == "utg" then
+if func == "utg" then
 _utg()
 end
-if getgenv().f == "wallwalk" then
+if func == "wallwalk" then
 	_wallwalk()
 end
-if getgenv().f == "gamegui" then
+if func == "gamegui" then
 _gamegui()
 end
-if getgenv().f == "ball" then
+if func == "ball" then
 	_ball()
 end
-if getgenv().f == "alltools" then
+if func == "alltools" then
 _GetAllTools()
 end
-if getgenv().f == "ShowGlass" then
+if func == "showglass" then
 	showglass()
 end
-if getgenv().f == "pladmin" then
+if func == "pladmin" then
 _pladmin()
 end
-if getgenv().f == "admin" then
+if func == "admin" then
 _admin()
 end
-
-
-
-
-
+if func == "fecheck" then
+_fecheck
+end
