@@ -8,8 +8,8 @@ local function createNotif(title,text,icon,duration)
 	end
   if game:GetService("Workspace").FilteringEnabled == true then
                 warn("FE is Enabled (Filtering Enabled)")
-               createNotif("FE Enabled!","FE is enabled for this game!")
+               createNotif("FE Enabled!","FE is enabled for this game, you can use your FE Scripts in this game!")
             else
               warn("FE is Disabled (Filtering Disabled) Consider using a different admin script.")
-              ceeateNotif("FE Disabled!","This game has Filtering Disabled, Consider switching to another game")
+              ceeateNotif("FE Disabled!","This game has Filtering Disabled, consider switching to another game",0,5)
 end
