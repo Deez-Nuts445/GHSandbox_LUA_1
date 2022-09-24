@@ -130,10 +130,6 @@ function _admin()
 	loadstring(game:HttpGet(('https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/Admin'),true))()
 end
 
-function _fecheck()
-loadstring(game:HttpGet((https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/FECheck'),true))()
-end
-
 if func == "getjobid" then
 	_getjobid()
 end
@@ -163,7 +159,4 @@ _pladmin()
 end
 if func == "admin" then
 _admin()
-end
-if func == "fecheck" then
-_fecheck()
 end
