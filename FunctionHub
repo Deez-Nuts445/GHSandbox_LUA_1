@@ -165,5 +165,5 @@ if func == "admin" then
 _admin()
 end
 if func == "fecheck" then
-_fecheck
+_fecheck()
 end
