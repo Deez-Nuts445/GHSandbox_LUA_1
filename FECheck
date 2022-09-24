@@ -1,0 +1,15 @@
+local function createNotif(title,text,icon,duration)
+		game.StarterGui:SetCore("SendNotification", {
+			Title = title; 
+			Text = text;
+			Icon = icon; 
+			Duration = duration; 
+		})
+	end
+  if game:GetService("Workspace").FilteringEnabled == true then
+                warn("FE is Enabled (Filtering Enabled)")
+               createNotif("FE Enabled!","FE is enabled for this game!")
+            else
+              warn("FE is Disabled (Filtering Disabled) Consider using a different admin script.")
+              ceeateNotif("FE Disabled!","THis game has Filtering Disabled, Consider switching to another game")
+end
