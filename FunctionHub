@@ -1,6 +1,6 @@
 -- getgenv() is only avabiale for exploits like krnl,scriptware,synapxe etc.
 -- if you cant access getgenv then wait for the _G version(more dangerous as smart devs can use a for if statement to see what table name they didnt add and kick you(basicily and _G or anti exploit with _G thing))
-local func = string.lower(func)
+local func = string.lower(getgenv().f)
 function _getjobid()
 	function log(l1,l2)
 		local t = {l1,l2}
