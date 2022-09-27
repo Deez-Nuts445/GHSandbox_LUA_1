@@ -1,0 +1,13 @@
+local mode = string.lower(getgenv().f)
+COREGUI = game:GetService("CoreGui")
+if mode == "rec" then
+return COREGUI:ToggleRecording()
+end
+if mode == "screenie" then
+
+return COREGUI:TakeScreenshot()
+end
+if mode == "fs" then 
+
+return COREGUI:TakeScreenshot()
+end
