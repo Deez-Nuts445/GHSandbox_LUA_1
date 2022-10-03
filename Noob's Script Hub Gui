@@ -3,10 +3,8 @@ local Window = Library.CreateLib("Noob's GUI Script Hub", "Ocean")
 local Tab = Window:NewTab("My Scripts")
 local Tab2 = Window:NewTab("Other Scripts")
 local Tab3 = Window:NewTab("Settings")
-
-local sets = Tab3:NewLabel("Settings")
+local sets = Tab3:NewSection("Settings")
 local Section = Tab:NewSection("O2 FE Script Hub")
-
 Section:NewDropdown("Scripts (Dropdown)", "A Library of scripts on O2 FE Script Hub", {"iy","getjobid", "exit", "utg", "wallwalk", "utg", "gamegui", "ball", "choosemap", "alltools", "showglass", "pladmin", "admin", "fecheck", "reach", "flinggui","whatexplotsareonline"}, function(currentOption)
 function loadScript(v,send)
 getgenv().f = v
