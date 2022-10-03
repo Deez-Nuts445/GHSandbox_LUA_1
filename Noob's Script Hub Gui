@@ -10,3 +10,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/O2-FE-Sc
 end
 loadScript(currentOption,true)
 end)
+Section:NewKeybind("KeybindText", "KeybindInfo", Enum.KeyCode.F, function()
+	Library:ToggleUI()
+end)
