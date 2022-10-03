@@ -1,3 +1,9 @@
+if getgenv().loaded == true then
+	print("Script already loaded!")
+end
+
+getgenv().loaded = true
+
 local a,b = pcall(function()
     game:GetService("CoreGui"):FindFirstChild("WhatExploitsAreOnline"):Destroy()
 end)
