@@ -18,7 +18,7 @@ end
 loadScript(currentOption,true)
 end)
 
-sets:NewKeybind("Toggle UI", "Toggles UI", Enum.KeyCode.F, function()
+sets:NewKeybind("Toggle UI", "Toggles UI", Enum.KeyCode.End, function()
 	Library:ToggleUI()
 end)
 
