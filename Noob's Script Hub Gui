@@ -28,7 +28,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbo
 end)
 
 local ky = Tab2:NewSection("Server Hop")
-ky:NewButton("Run", "Server Hub", function()
+ky:NewButton("Run", "Server Hop", function()
 local module = loadstring(game:HttpGet"https://raw.githubusercontent.com/LeoKholYt/roblox/main/lk_serverhop.lua")()
 
 module:Teleport(game.PlaceId)
