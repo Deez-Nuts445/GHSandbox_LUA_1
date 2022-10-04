@@ -4,6 +4,12 @@ local Tab = Window:NewTab("My Scripts")
 local Tab2 = Window:NewTab("Other Scripts")
 local Tab3 = Window:NewTab("Settings")
 local sets = Tab3:NewSection("Settings")
+for theme, color in pairs(themes) do
+  Tab:NewColorPicker(theme, "Change your "..theme, color, function(color3)
+        Library:ChangeColor(theme, color3)
+    end)
+end
+
 local dd = Tab2:NewSection("ZMod v2.3")
 dd:NewButton("Run", "ZMod v2.3", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/VMod"))()
