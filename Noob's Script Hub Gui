@@ -4,15 +4,8 @@ local Tab = Window:NewTab("My Scripts")
 local Tab2 = Window:NewTab("Other Scripts")
 local Tab3 = Window:NewTab("Settings")
 local sets = Tab3:NewSection("Settings")
-local dd = Tab2:NewSection("ZMod v2.3")
-dd:NewButton("Run", "ZMod v2.3", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/VMod"))()
-end)
-local js = Tab2:NewSection("Dark Hub")
-js:NewButton("Run", "Dark Hub", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/d",true))()
-end)
 local Section = Tab:NewSection("O2 FE Script Hub")
+
 Section:NewDropdown("Scripts (Dropdown)", "A Library of scripts on O2 FE Script Hub", {"iy","getjobid", "exit", "utg", "wallwalk", "utg", "gamegui", "ball", "choosemap", "alltools", "showglass", "pladmin", "admin", "fecheck", "reach", "flinggui","whatexplotsareonline"}, function(currentOption)
 function loadScript(v,send)
 getgenv().f = v
@@ -20,6 +13,16 @@ getgenv().m = send
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/O2-FE-Script-hub/main/src"))()
 end
 loadScript(currentOption,true)
+end)
+
+local dd = Tab2:NewSection("ZMod v2.3")
+dd:NewButton("Run", "ZMod v2.3", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/VMod"))()
+end)
+
+local js = Tab2:NewSection("Dark Hub")
+js:NewButton("Run", "Dark Hub", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/d",true))()
 end)
 
 sets:NewKeybind("Toggle UI", "Toggles UI", Enum.KeyCode.End, function()
