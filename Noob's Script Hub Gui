@@ -27,6 +27,15 @@ js:NewButton("Run", "Dark Hub", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/d",true))()
 end)
 
+local ky = Tab2:NewSection("Server Hop")
+js:NewButton("Run", "Server Hub", function()
+local module = loadstring(game:HttpGet"https://raw.githubusercontent.com/LeoKholYt/roblox/main/lk_serverhop.lua")()
+
+module:Teleport(game.PlaceId)
+repeat wait() until game.Players.LocalPlayer
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/Noob's%20Script%20Hub%20Gui"))()
+end)
+
 sets:NewKeybind("Toggle UI", "Toggles UI", Enum.KeyCode.End, function()
 	Library:ToggleUI()
 end)
