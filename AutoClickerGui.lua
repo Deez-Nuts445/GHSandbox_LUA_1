@@ -1,5 +1,5 @@
 if getgenv().loaded == true then
-	warn("Script already loaded!")
+	error("Script already loaded!")
 end
 
 getgenv().loaded = true
