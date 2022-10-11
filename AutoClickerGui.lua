@@ -1,4 +1,10 @@
-	local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+if getgenv().loaded == true then
+	warn("Script already loaded!")
+end
+
+getgenv().loaded = true
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
   getgenv().key = "z"
 	getgenv().time = 0.01
 	local gui = Library.CreateLib("Autoclicker GUI","Midnight")
