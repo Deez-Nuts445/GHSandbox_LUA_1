@@ -1,0 +1,10 @@
+local sussy = {}
+tunction runFunction(FName,func)
+if type(func) == "function" then
+func()
+else
+error("Not a function!")
+end
+end
+return sussy
+
