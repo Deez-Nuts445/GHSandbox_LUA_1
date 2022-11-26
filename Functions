@@ -1,5 +1,5 @@
 local sussy = {}
-tunction runFunction(FName,func)
+function sussy.runFunction(func)
 if type(func) == "function" then
 func()
 else
