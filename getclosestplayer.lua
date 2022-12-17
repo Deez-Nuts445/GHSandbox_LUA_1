@@ -12,7 +12,6 @@ local players = game.Players:GetPlayers()
     local distance = (player.Character.PrimaryPart.Position - otherPlayer.Character.PrimaryPart.Position).magnitude
     if distance < minDistance then
       closestPlayer = otherPlayer
-      print(closestPlayer)
       minDistance = distance
       display = game.Players:FindFirstChild(closestPlayer.Name).DisplayName
     end
