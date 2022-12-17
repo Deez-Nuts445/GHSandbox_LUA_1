@@ -1,6 +1,6 @@
 local module = {}
 
-function module.GetClosestPlayer()
+function module:GetClosestPlayer()
 local player = game.Players.LocalPlayer
 local players = game.Players:GetPlayers()
   local minDistance = math.huge
