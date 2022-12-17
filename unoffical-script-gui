@@ -1,0 +1,28 @@
+local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/discord-ui.lua")()
+
+local win = DiscordLib:Window("Unofficial GUI")
+
+local serv = win:Server("Definetly not edited for UnOfficial game GUI", "")
+
+local btns = serv:Channel("Main")
+
+btns:Toggle("Auto Offical",true,function(b)
+        getgenv().Loop = b
+        while wait() do -- while you wait it will do
+            if getgenv().Loop == true then -- if game environment is set to true then
+            game:GetService("ReplicatedStorage").Remotes.CallOfficial:FireServer()
+            else
+                print("off for a-offical") -- continuously prints, this can help for letting you know when it is off and on
+            end
+        end
+end)
+btns:Toggle("Auto Slap on 6",true,function(b)
+    getgenv().Slapon6 = b
+        while wait() do -- while you wait it will do
+            if getgenv().Slapon6 == true then -- if game environment is set to true then
+            game:GetService("ReplicatedStorage").Remotes.SlapOnSix:FireServer()
+            else
+                print("off for a-slapon6") -- continuously prints, this can help for letting you know when it is off and on
+            end
+        end
+end)
