@@ -1,6 +1,6 @@
 local module = {}
 
-function checkIfKeyPressed(cur,target,callback)
+function module.checkIfKeyPressed(cur,target,callback)
 while wait() do
   local uis = game:GetService("UserInputService")
   uis.InputBegan:Connect(function(key,busy)
