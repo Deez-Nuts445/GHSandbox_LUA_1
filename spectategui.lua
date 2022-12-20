@@ -23,16 +23,15 @@ game.Workspace.Camera.CameraSubject = v.Character.Humanoid
 end
 end
 end
-
-for i,v in pairs(game.Players:GetPlayers()) do
-if i == plrNum then
 spawn(function()
-	while wait() do
+    while wait() do
+        for i,v in pairs(game.Players:GetPlayers()) do
+        if i == plrNum then
 		game.Workspace.Camera.CameraSubject = v.Character.Humanoid
-	end
+        end
+end
+    end
 end)
-end
-end
 
 prevb.MouseButton1Down:connect(function()
 prev()
