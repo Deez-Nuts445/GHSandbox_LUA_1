@@ -26,7 +26,11 @@ end
 
 for i,v in pairs(game.Players:GetPlayers()) do
 if i == plrNum then
-game.Workspace.Camera.CameraSubject = v.Character.Humanoid
+spawn(function()
+	while wait() do
+		game.Workspace.Camera.CameraSubject = v.Character.Humanoid
+	end
+end)
 end
 end
 
