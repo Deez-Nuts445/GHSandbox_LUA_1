@@ -1,5 +1,5 @@
 local uis = game:GetService("UserInputService")
-local want_key = true
+local wantkey = true
 gui = Instance.new("ScreenGui",game.Players.LocalPlayer.PlayerGui)
 gui.ResetOnSpawn = false
 nextb = Instance.new("TextButton", gui)
@@ -53,7 +53,7 @@ end)
 uis.InputBegan:Connect(function(key,busy)
 if not busy then
 local keycodes = Enum.KeyCode
-if key.KeyCode == keycodes.L then
+if key.KeyCode == keycodes.Z then
 wantkey = not wantkey
 end
 if wantkey == true then
