@@ -1,6 +1,7 @@
 local uis = game:GetService("UserInputService")
 local want_key = true
 gui = Instance.new("ScreenGui",game.Players.LocalPlayer.PlayerGui)
+gui.ResetOnSpawn = false
 nextb = Instance.new("TextButton", gui)
 nextb.Position = UDim2.new(0.88,0,0.9,0)
 nextb.Size = UDim2.new(0.1,0,0.07,0)
