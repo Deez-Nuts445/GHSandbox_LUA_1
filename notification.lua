@@ -1,6 +1,6 @@
 local module = {}
 
-function module.makeNotif(text,time)
+function module:notif(text)
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
@@ -49,18 +49,12 @@ TextLabel_2.TextWrapped = true
 local function CKVUGUC_fake_script() -- ScreenGui.LocalScript 
 	local script = Instance.new('LocalScript', ScreenGui)
 
-	wait(time)
+	wait(5)
 	script.Parent:Destroy()
 end
-coroutine.wrap(CKVUGUC_fake_script)()
-local function AIYFE_fake_script() -- ScreenGui.LocalScript 
-	local script = Instance.new('LocalScript', ScreenGui)
   local drag = loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/dragify-plus-loadstring.lua"))()
-	drag(Frame)
-  drag(Frame_2)
-  
-end
-coroutine.wrap(AIYFE_fake_script)()
+drag.dragify(Frame)
+  drag.dragify(Frame_2)
 end  
 
 return module
