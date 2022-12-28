@@ -26,24 +26,6 @@ TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.TextScaled = true
 TextLabel.TextSize = 14.000
 TextLabel.TextWrapped = true
-
-Frame_2.Parent = ScreenGui
-Frame_2.BackgroundColor3 = Color3.fromRGB(255, 64, 67)
-Frame_2.Position = UDim2.new(0, 475, 0, 167)
-Frame_2.Size = UDim2.new(0, 297, 0, 27)
-
-TextLabel_2.Parent = Frame_2
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.BackgroundTransparency = 1.000
-TextLabel_2.Position = UDim2.new(0, 50, 0, -3)
-TextLabel_2.Size = UDim2.new(0, 200, 0, 30)
-TextLabel_2.Font = Enum.Font.SourceSans
-TextLabel_2.Text = "Notification"
-TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_2.TextScaled = true
-TextLabel_2.TextSize = 14.000
-TextLabel_2.TextWrapped = true
-
 wait(5)
 ScreenGui:Destroy()
 end  
