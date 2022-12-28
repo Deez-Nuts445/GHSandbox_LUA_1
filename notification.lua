@@ -44,17 +44,8 @@ TextLabel_2.TextScaled = true
 TextLabel_2.TextSize = 14.000
 TextLabel_2.TextWrapped = true
 
--- Scripts:
-
-local function CKVUGUC_fake_script() -- ScreenGui.LocalScript 
-	local script = Instance.new('LocalScript', ScreenGui)
-
-	wait(5)
-	script.Parent:Destroy()
-end
-  local drag = loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/dragify-plus-loadstring.lua"))()
-drag.dragify(Frame)
-  drag.dragify(Frame_2)
+wait(5)
+ScreenGui:Destroy()
 end  
 
 return module
