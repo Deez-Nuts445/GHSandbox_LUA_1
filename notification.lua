@@ -1,6 +1,6 @@
 local module = {}
 
-function module:notif(text)
+function module:notif(text,n)
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
@@ -26,7 +26,7 @@ TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.TextScaled = true
 TextLabel.TextSize = 14.000
 TextLabel.TextWrapped = true
-wait(5)
+wait(n)
 ScreenGui:Destroy()
 end  
 
