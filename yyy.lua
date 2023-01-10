@@ -9,7 +9,7 @@ local pl2 = mint
 local pl3 = secs
 local pl4 = ""
 -- change to 0, with pm/am switching
-if type = 12 then
+if type == 12 then
 if hour >= 10 then
 pl1 = "0"..hour - 12
 pl4 = 'PM'
