@@ -30,4 +30,14 @@ wait(n)
 ScreenGui:Destroy()
 end  
 
+function module:postMsg(col: Color3,font: Enum,size: Number,text: Value)
+local properties = {
+    Color = col;
+    Font = font;
+    TextSize = size;
+    Text = text
+}
+game.StarterGui:SetCore("ChatMakeSystemMessage", properties)
+end
+
 return module
