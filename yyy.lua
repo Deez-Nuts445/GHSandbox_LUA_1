@@ -14,7 +14,8 @@ if hour >= 10 then
 pl1 = "0"..hour - 12
 pl4 = 'PM'
 else
-   pl4 = 'AM'
+pl1 = "0"..hour
+pl4 = 'AM'
 end
 if mint <= 9 then
 pl2 = "0"..mint
