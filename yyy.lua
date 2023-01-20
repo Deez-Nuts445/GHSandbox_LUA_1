@@ -11,7 +11,12 @@ local pl4 = ""
 -- change to 0, with pm/am switching
 if type == 12 then
 if hour >= 10 then
-pl1 = "0"..hour - 12
+pl1 = hour - 12
+if pl1 >= 10 then
+pl1 = pl1
+        else
+pl1 = "0"..pl1        
+end
 pl4 = 'PM'
 else
 pl1 = "0"..hour
