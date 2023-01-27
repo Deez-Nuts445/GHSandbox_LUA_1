@@ -12,16 +12,16 @@ local pl4 = ""
 if type == 12 then -- checks if type = 12 hour
 if hour >= 10 then -- os.date("*t") returns 24 hour, so this checks for 2 digits
 if hour ~= 12 then -- because os.date("*t") returns 24 hour, so this if else checks if its am or pm
-pl1 = hour - 12
-if pl1 >= 10 then
-pl1 = pl1
-        else
-pl1 = "0"..pl1        
+pl1 = hour - 12 -- sets placeholder 1 to hour(24) - 12
+if pl1 >= 10 then -- checks if pl1 is bigger/equals to 10
+pl1 = pl1 -- no change
+else
+pl1 = "0"..pl1  -- since the numbers over here are 1 digit, so we add 0 to it
 end
-pl4 = 'PM'
+pl4 = 'PM' -- you know this means that its PM
 else
 pl1 = "0"..hour
-pl4 = 'AM'
+pl4 = 'PM'
 end
 end
 if mint <= 9 then
