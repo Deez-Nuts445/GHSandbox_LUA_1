@@ -10,7 +10,7 @@ local pl3 = secs
 local pl4 = "AM"
 -- change to 0, with pm/am switching
 if type == 12 then -- checks if type = 12 hour
-if hour >= 13 and not hour ~= 12 then -- os.date("*t") returns 24 hour, so this checks for 2 digits for 24 hour thing
+if hour >= 13 and hour ~= 12 then -- os.date("*t") returns 24 hour, so this checks for 2 digits for 24 hour thing
 pl1 = hour - 12
 pl4 = "PM"     
 if pl1 <= 10 then
