@@ -7,7 +7,7 @@ local secs = os.date("*t")["sec"]
 local pl1 = hour 
 local pl2 = mint
 local pl3 = secs
-local pl4 = ""
+local pl4 = "PM"
 -- change to 0, with pm/am switching
 if type == 12 then -- checks if type = 12 hour
 if hour >= 10 then -- os.date("*t") returns 24 hour, so this checks for 2 digits
@@ -22,7 +22,7 @@ pl4 = 'PM' -- you know this means that its PM
 end
 elseif hour <= 9 then
 pl1 = "0"..pl1
-pl4 = 'PM'        
+pl4 = 'AM'        
 end
 end
 if mint <= 9 the
