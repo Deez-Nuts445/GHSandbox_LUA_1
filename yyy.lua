@@ -19,9 +19,6 @@ else
 pl1 = "0"..pl1  -- since the numbers over here are 1 digit, so we add 0 to it
 end
 pl4 = 'PM' -- you know this means that its PM
-else
-pl1 = "0"..hour
-pl4 = 'PM'
 end
 end
 if mint <= 9 then
