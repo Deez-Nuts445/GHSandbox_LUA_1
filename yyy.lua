@@ -15,16 +15,17 @@ if hour ~= 12 then -- because os.date("*t") returns 24 hour, so this if else che
 pl1 = hour - 12 -- sets placeholder 1 to hour(24) - 12
 if pl1 >= 10 then -- checks if pl1 is bigger/equals to 10
 pl1 = pl1 -- no change
+pl4 = 'PM' -- you know this means that its PM
 else
 pl1 = "0"..pl1  -- since the numbers over here are 1 digit, so we add 0 to it
-end
 pl4 = 'PM' -- you know this means that its PM
+end
 elseif hour <= 9 then
 pl1 = "0"..pl1
 pl4 = 'PM'        
 end
 end
-if mint <= 9 then
+if mint <= 9 the
 pl2 = "0"..mint
 end
 if secs <= 9 then
