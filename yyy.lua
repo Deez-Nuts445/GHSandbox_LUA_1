@@ -10,23 +10,28 @@ local pl3 = secs
 local pl4 = "AM"
 -- change to 0, with pm/am switching
 if type == 12 then -- checks if type = 12 hour
-if hour >= 13 and hour ~= 12 then -- os.date("*t") returns 24 hour, so this checks for 2 digits for 24 hour thing
-pl1 = "0"..hour - 12
-pl4 = "PM"     
-if pl1 <= 10 then
+if hour >= 13 then
+local ph5 = tonumber(hour) - 12      
+pl1 = "0"..ph5
+pl4 = "PM"
+elseif hour <= 9 then
+pl1 = "0"..hour
 pl4 = "AM"      
-end        
-elseif hour >= 10 then
-pl1 = hour - 12
-end
-if mint <= 9 the
+else
+pl1 = hour
+pl4 = "AM"      
+end    
+------------------------
+if mint <= 9 then
 pl2 = "0"..mint
 end
+------------------------
 if secs <= 9 then
 pl3 = "0"..secs
 else
 pl3 = secs
-end      
+end
+------------------------    
 end      
 function fmt:format(str)
 local str = str
