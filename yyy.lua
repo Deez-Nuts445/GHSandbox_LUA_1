@@ -12,7 +12,7 @@ local pl4 = "AM"
 if type == 12 then -- checks if type = 12 hour
 if hour >= 13 then
 local ph5 = tonumber(hour) - 12      
-if ph5 >= 10 then
+if ph5 <= 9 then
 pl1 = "0"..ph5        
 else
 pl1 = ph5        
